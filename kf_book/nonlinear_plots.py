@@ -268,7 +268,7 @@ def plot_cov_ellipse_colormap(cov=[[1,1],[1,1]]):
     pos[:, :, 1] = Y
     plt.axes(xticks=[], yticks=[], frameon=True)
     rv = scipy.stats.multivariate_normal((0,0), cov)
-    plt.gca().grid(b=False)
+    plt.gca().grid()
     plt.gca().imshow(rv.pdf(pos), cmap=plt.cm.Greys, origin='lower')
     plt.show()
 
